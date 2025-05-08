@@ -138,12 +138,13 @@ const Gallery: React.FC = () => {
                           <p className="text-white text-sm opacity-90">by {item.artist}</p>
                           <div className="mt-2 flex flex-wrap gap-2">
                             {item.tags.map((tag, tagIdx) => (
-                              <span 
-                                key={tagIdx} 
-                                className="inline-block bg-white bg-opacity-20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full"
+                              <Badge 
+                                key={tagIdx}
+                                variant="outline" 
+                                className="bg-white/20 backdrop-blur-sm text-white border-white/10"
                               >
                                 {tag}
-                              </span>
+                              </Badge>
                             ))}
                           </div>
                         </div>
@@ -235,8 +236,9 @@ const Gallery: React.FC = () => {
             <Button 
               className="bg-gradient-coral hover:shadow-lg transition-all animate-subtle-pulse"
               size="lg"
+              asChild
             >
-              Book Your Session Now
+              <Link to="/book">Book Your Session Now</Link>
             </Button>
           </AnimatedSection>
         </div>

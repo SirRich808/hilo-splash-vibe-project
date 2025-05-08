@@ -8,6 +8,11 @@ import Index from "./pages/Index";
 import Book from "./pages/Book";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
+import Experiences from "./pages/Experiences";
+import Events from "./pages/Events";
+import Cafe from "./pages/Cafe";
+import Contact from "./pages/Contact";
+import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,12 +28,11 @@ const App = () => (
           <Route path="/book" element={<Book />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
-          {/* These routes will be implemented in future iterations */}
-          <Route path="/experiences" element={<NotFound />} />
-          <Route path="/events" element={<NotFound />} />
-          <Route path="/cafe" element={<NotFound />} />
-          <Route path="/contact" element={<NotFound />} />
-          <Route path="/faq" element={<NotFound />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/cafe" element={<Cafe />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<Faq />} />
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>

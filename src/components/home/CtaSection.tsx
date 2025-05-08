@@ -11,11 +11,11 @@ const CtaSection: React.FC = () => {
     <ParallaxSection 
       bgImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070"
       height="h-[70vh]"
-      overlayOpacity={0.6}
+      overlayOpacity={0.7} // Increased overlay opacity for better text visibility
     >
-      <div className="text-center">
-        <AnimatedSection animation="fade-in">
-          <span className="inline-block mb-4 bg-white bg-opacity-20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium">
+      <div className="text-center" style={{ position: 'relative', zIndex: 5 }}>
+        <AnimatedSection animation="fade-in" forceVisible={true}>
+          <span className="inline-block mb-4 bg-white bg-opacity-30 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium border border-white/20">
             Limited Time Offer
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-shadow-lg">
@@ -23,15 +23,15 @@ const CtaSection: React.FC = () => {
           </h2>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in" delay={200}>
+        <AnimatedSection animation="fade-in" delay={200} forceVisible={true}>
           <div className="flex flex-wrap justify-center gap-4 items-center mb-8">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 w-64 text-white">
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-4 w-64 text-white border border-white/10">
               <h3 className="font-bold text-lg mb-1">Standard Session</h3>
               <p className="text-sm mb-2">2-hour creative experience</p>
               <p className="font-bold text-xl text-coral-light">$45 per person</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 w-64 text-white border-2 border-coral-light relative">
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-4 w-64 text-white border-2 border-coral-light relative">
               <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-coral-light text-white text-xs py-1 px-3 rounded-full">
                 MOST POPULAR
               </span>
@@ -40,7 +40,7 @@ const CtaSection: React.FC = () => {
               <p className="font-bold text-xl text-coral-light">$55 per person</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 w-64 text-white">
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-4 w-64 text-white border border-white/10">
               <h3 className="font-bold text-lg mb-1">Family Package</h3>
               <p className="text-sm mb-2">2-hour fun for 4 people</p>
               <p className="font-bold text-xl text-coral-light">$160 (save $20)</p>
@@ -58,7 +58,7 @@ const CtaSection: React.FC = () => {
           </p>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in" delay={400}>
+        <AnimatedSection animation="fade-in" delay={400} forceVisible={true}>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button 
               size="lg" 
@@ -83,7 +83,7 @@ const CtaSection: React.FC = () => {
           </div>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in" delay={600}>
+        <AnimatedSection animation="fade-in" delay={600} forceVisible={true}>
           <div className="mt-8 text-white">
             <div className="flex items-center justify-center space-x-1 mb-2">
               <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
