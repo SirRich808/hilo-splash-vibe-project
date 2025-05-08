@@ -95,7 +95,7 @@ const Gallery: React.FC = () => {
     <Layout>
       <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-10">
         <div className="container mx-auto px-4 lg:px-8 py-12">
-          <AnimatedSection animation="fade-in">
+          <AnimatedSection animation="fade-in" forceVisible={true}>
             <SectionTitle
               title="Gallery of Splatter Masterpieces"
               subtitle="Dive into our colorful world of creativity - each piece tells a unique story of artistic expression and island inspiration"
@@ -103,7 +103,7 @@ const Gallery: React.FC = () => {
             />
           </AnimatedSection>
 
-          <AnimatedSection animation="fade-in" delay={200} className="mb-12">
+          <AnimatedSection animation="fade-in" delay={200} className="mb-12" forceVisible={true}>
             <p className="text-lg text-center max-w-3xl mx-auto">
               Our gallery showcases the incredible diversity of artwork created at Hilo Splash Haus. From first-time painters to experienced artists, 
               everyone leaves with a one-of-a-kind masterpiece that captures the essence of their Hawaiian experience.
@@ -111,7 +111,7 @@ const Gallery: React.FC = () => {
           </AnimatedSection>
 
           {/* Featured Gallery Carousel */}
-          <AnimatedSection animation="fade-in" delay={400} className="mb-16">
+          <AnimatedSection animation="fade-in" delay={400} className="mb-16" forceVisible={true}>
             <div className="relative px-4 py-10">
               <h3 className="text-2xl font-bold mb-8 text-center">Featured Creations</h3>
               
@@ -173,7 +173,7 @@ const Gallery: React.FC = () => {
           </AnimatedSection>
 
           {/* Gallery Categories */}
-          <AnimatedSection animation="fade-in" delay={600}>
+          <AnimatedSection animation="fade-in" delay={600} forceVisible={true}>
             <h3 className="text-2xl font-bold mb-6 text-center">Explore by Category</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
               {[
@@ -198,7 +198,7 @@ const Gallery: React.FC = () => {
           </AnimatedSection>
 
           {/* Floating Tile Grid */}
-          <AnimatedSection animation="fade-in" delay={800}>
+          <AnimatedSection animation="fade-in" delay={800} forceVisible={true}>
             <h3 className="text-2xl font-bold mb-8 text-center">All Masterpieces</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {galleryItems.map((item) => (
@@ -226,7 +226,7 @@ const Gallery: React.FC = () => {
           </AnimatedSection>
 
           {/* Call to Action */}
-          <AnimatedSection animation="fade-in" delay={1000} className="text-center mt-16">
+          <AnimatedSection animation="fade-in" delay={1000} className="text-center mt-16" forceVisible={true}>
             <h3 className="text-2xl font-bold mb-4">Ready to Create Your Own Masterpiece?</h3>
             <p className="max-w-2xl mx-auto mb-8">
               Join us at Hilo Splash Haus and unleash your creativity with our unique splatter painting experience.
