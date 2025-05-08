@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import ParallaxSection from '../shared/ParallaxSection';
 import AnimatedSection from '../shared/AnimatedSection';
+import { Link } from 'react-router-dom';
 
 const CtaSection: React.FC = () => {
   return (
     <ParallaxSection 
       bgImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070"
-      height="h-[50vh]"
+      height="h-[60vh]"
       overlayOpacity={0.6}
     >
       <div className="text-center">
@@ -20,8 +21,14 @@ const CtaSection: React.FC = () => {
         </AnimatedSection>
         
         <AnimatedSection animation="fade-in" delay={200}>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto text-shadow">
+          <p className="text-xl text-white mb-4 max-w-2xl mx-auto text-shadow">
             Book your session today and experience the perfect blend of creative expression and island relaxation.
+          </p>
+          
+          <p className="text-lg text-white mb-8 max-w-3xl mx-auto text-shadow">
+            No artistic experience required — just bring your imagination and we'll provide everything else! 
+            Our friendly staff will guide you through the process, ensuring you have a memorable experience 
+            and leave with a unique creation to take home.
           </p>
         </AnimatedSection>
         
@@ -30,16 +37,29 @@ const CtaSection: React.FC = () => {
             <Button 
               size="lg" 
               className="bg-gradient-coral hover:shadow-lg transition-all animate-subtle-pulse"
+              asChild
             >
-              Book Now <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to="/book">
+                Book Now <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="bg-white bg-opacity-10 backdrop-blur-sm border-white text-white hover:bg-white hover:bg-opacity-20"
+              asChild
             >
-              Contact Us
+              <Link to="/contact">
+                <Phone className="mr-2 h-4 w-4" /> Contact Us
+              </Link>
             </Button>
+          </div>
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fade-in" delay={600}>
+          <div className="mt-8 text-white text-opacity-90">
+            <p className="font-medium">Special offer: 10% off for groups of 4+</p>
+            <p className="text-sm mt-1">Book for a weekday session and get a free tropical smoothie!</p>
           </div>
         </AnimatedSection>
       </div>

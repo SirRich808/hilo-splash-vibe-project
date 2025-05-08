@@ -62,8 +62,10 @@ const Header: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-gradient-coral text-white hover:shadow-lg transition-all">
-            Book Now
+          <Button className="bg-gradient-coral text-white hover:shadow-lg transition-all" asChild>
+            <Link to="/book">
+              Book Now
+            </Link>
           </Button>
         </nav>
 
@@ -93,8 +95,11 @@ const Header: React.FC = () => {
             <Button 
               className="bg-gradient-coral text-white hover:shadow-lg w-full mt-4 animate-fade-in"
               style={{ animationDelay: `${navLinks.length * 50}ms` }}
+              asChild
             >
-              Book Now
+              <Link to="/book" onClick={() => setIsMenuOpen(false)}>
+                Book Now
+              </Link>
             </Button>
           </div>
         </nav>

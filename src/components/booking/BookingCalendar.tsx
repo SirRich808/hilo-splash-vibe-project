@@ -17,6 +17,7 @@ const BookingCalendar: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [participants, setParticipants] = useState('2');
+  const [specialRequests, setSpecialRequests] = useState('');
 
   // Generate time slots (these would come from a backend in a real app)
   const generateTimeSlots = (selectedDate: Date | undefined) => {
@@ -68,7 +69,7 @@ const BookingCalendar: React.FC = () => {
 
     toast({
       title: "Booking Request Received!",
-      description: `Thank you ${name}! Your booking request for ${format(date, 'MMMM d, yyyy')} at ${selectedTimeSlot} has been received. We'll contact you shortly to confirm.`,
+      description: `Thank you ${name}! Your booking request for ${format(date, 'MMMM d, yyyy')} at ${selectedTimeSlot} has been received. We'll contact you shortly to confirm. Prepare for a splash-tastic time!`,
       className: "bg-teal text-white",
     });
 
@@ -78,6 +79,7 @@ const BookingCalendar: React.FC = () => {
     setName('');
     setEmail('');
     setParticipants('2');
+    setSpecialRequests('');
   };
 
   const isDateDisabled = (date: Date) => {
@@ -95,6 +97,7 @@ const BookingCalendar: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Your Splash Experience</h2>
             <p className="text-lg text-gray-600">
               Select a date and time that works for you, and we'll prepare everything for your creative adventure!
+              Our 2-hour sessions include all materials and guidance from our friendly staff.
             </p>
           </div>
         </AnimatedSection>
@@ -192,6 +195,16 @@ const BookingCalendar: React.FC = () => {
                             type="number"
                             min="1"
                             max="10"
+                            className="mt-1"
+                          />
+                        </div>
+                        <div>
+                          <Label htmlFor="special-requests">Special Requests (Optional)</Label>
+                          <Input
+                            id="special-requests"
+                            value={specialRequests}
+                            onChange={(e) => setSpecialRequests(e.target.value)}
+                            placeholder="Any special requests or accommodations"
                             className="mt-1"
                           />
                         </div>

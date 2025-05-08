@@ -10,6 +10,7 @@ interface FeatureCardProps {
   image?: string;
   className?: string;
   delay?: number;
+  children?: React.ReactNode;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
@@ -19,6 +20,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   image,
   className,
   delay = 0,
+  children
 }) => {
   return (
     <div
@@ -38,9 +40,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </div>
       )}
       <div className="p-6">
-        {Icon && <Icon className="h-8 w-8 text-coral mb-4" />}
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <div className="flex items-center mb-3">
+          {Icon && <Icon className="h-6 w-6 text-coral mr-2" />}
+          <h3 className="text-xl font-bold">{title}</h3>
+        </div>
+        <p className="text-gray-600 mb-4">{description}</p>
+        {children}
       </div>
     </div>
   );
