@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Brand colors
+                coral: {
+                    DEFAULT: '#FF6B6B',
+                    light: '#FF8E8E',
+                    dark: '#E74E4E'
+                },
+                teal: {
+                    DEFAULT: '#4ECDC4',
+                    light: '#71DAD3',
+                    dark: '#37B8B0'
+                },
+                sunset: {
+                    DEFAULT: '#FF9F1C',
+                    light: '#FFB14F',
+                    dark: '#E68600'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +101,53 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' }
+                },
+                'fade-in-left': {
+                    '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                    '100%': { opacity: '1', transform: 'translateX(0)' }
+                },
+                'fade-in-right': {
+                    '0%': { opacity: '0', transform: 'translateX(20px)' },
+                    '100%': { opacity: '1', transform: 'translateX(0)' }
+                },
+                'slide-up': {
+                    '0%': { transform: 'translateY(100%)' },
+                    '100%': { transform: 'translateY(0)' }
+                },
+                'zoom-in': {
+                    '0%': { transform: 'scale(0.95)', opacity: '0' },
+                    '100%': { transform: 'scale(1)', opacity: '1' }
+                },
+                'subtle-pulse': {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.8s ease-out forwards',
+                'fade-in-left': 'fade-in-left 0.8s ease-out forwards',
+                'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
+                'slide-up': 'slide-up 0.7s ease-out forwards',
+                'zoom-in': 'zoom-in 0.8s ease-out forwards',
+                'subtle-pulse': 'subtle-pulse 2s ease-in-out infinite'
+			},
+            fontFamily: {
+                'sans': ['Inter', 'sans-serif'],
+                'display': ['"Playfair Display"', 'serif'],
+                'tropical': ['"Pacifico"', 'cursive'],
+            },
+            backgroundImage: {
+                'hero-pattern': "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070')",
+                'gradient-coral': 'linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%)',
+                'gradient-teal': 'linear-gradient(135deg, #37B8B0 0%, #71DAD3 100%)',
+                'gradient-sunset': 'linear-gradient(135deg, #E68600 0%, #FFB14F 100%)',
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
