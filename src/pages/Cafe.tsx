@@ -4,7 +4,7 @@ import Layout from '@/components/Layout/Layout';
 import SectionTitle from '@/components/shared/SectionTitle';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { Button } from '@/components/ui/button';
-import { Coffee, Leaf, Fruit, Star } from 'lucide-react';
+import { Coffee, Leaf, Apple, Star } from 'lucide-react';
 
 const Cafe: React.FC = () => {
   const menuCategories = [
@@ -79,7 +79,7 @@ const Cafe: React.FC = () => {
                   
                   <div className="flex items-start">
                     <div className="bg-gradient-to-br from-teal to-teal-light p-2 rounded-lg text-white mr-3">
-                      <Fruit size={20} />
+                      <Apple size={20} />
                     </div>
                     <div>
                       <h4 className="font-medium">Fresh Fruits</h4>

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout/Layout';
 import SectionTitle from '@/components/shared/SectionTitle';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { 
   ArrowLeft, 
   ArrowRight, 
